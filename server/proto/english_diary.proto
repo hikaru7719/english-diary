@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package english_diary;
+
+option go_package = "english_diary";
+
+service EnglishDiary {
+    rpc GetDiary(GetDiaryRequest) returns (Diary) {}
+};
+
+message Diary {
+    int64 id = 1;
+    string title = 2;
+    string body = 3;
+};
+
+message GetDiaryRequest {
+    int64 id = 1;
+}
