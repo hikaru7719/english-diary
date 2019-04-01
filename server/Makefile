@@ -9,3 +9,7 @@ protoc: protoc-grpc
 .PHONY: protoc-grpc
 protoc-grpc:
 	protoc -I proto/ --go_out=plugins=grpc:proto/ proto/*.proto
+
+.PHONY: cp-proto
+cp-proto:
+	cp ../proto/*.proto proto/
