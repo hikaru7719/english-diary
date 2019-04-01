@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package english_diary;
 
-option go_package = "english_diary";
+option go_package = "proto";
 
 service EnglishDiary {
     rpc GetDiary(GetDiaryRequest) returns (Diary) {}
