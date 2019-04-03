@@ -12,8 +12,8 @@ static_resources:
     - filters:
       - name: envoy.http_connection_manager
         config:
-          code_type: auto
-          static_prefix: ingress_http
+          codec_type: auto
+          stat_prefix: ingress_http
           route_config:
             name: local_route
             virtual_hosts:
@@ -40,6 +40,6 @@ static_resources:
   - name: english_diary_service
     connect_timeout: 0.25s
     type: logical_dns
-    http2_protocor_options: {}
+    http2_protocol_options: {}
     lb_policy: round_robin
     hosts: [{ socket_address: { address: localhost, port_value: 8080}}]
